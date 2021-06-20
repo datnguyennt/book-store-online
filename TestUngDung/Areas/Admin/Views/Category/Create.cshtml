@@ -1,0 +1,62 @@
+﻿@model ModelEF.Model.Category
+
+@{
+	ViewBag.Title = "Thêm loại sách";
+	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<br />
+<div class="col-md-6">
+	<div class="panel">
+		<div class="panel-body">
+			@using (Html.BeginForm("create", "category", FormMethod.Post))
+			{
+				@Html.AntiForgeryToken()
+				@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+				<div class="form-group">
+					@Html.LabelFor(model => model.Name)
+					@Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+					@Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+				</div>
+				<div class="form-group">
+					@Html.LabelFor(model => model.Metatitle)
+					@Html.EditorFor(model => model.Metatitle, new { htmlAttributes = new { @class = "form-control" } })
+					@Html.ValidationMessageFor(model => model.Metatitle, "", new { @class = "text-danger" })
+				</div>
+				<div class="form-group">
+					@Html.LabelFor(model => model.Description)
+					@Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+					@Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+				</div>
+				<button type="submit" class="btn btn-primary">Lưu</button>
+			}
+		</div>
+	</div>
+	<div class="col-md-4">
+		<a href="@Url.Action("Index","category")" class="btn btn-danger">Quay lại</a>
+	</div>
+</div>
+
+@section jsfooter{
+	<script type="text/javascript">
+		//Viết đến đâu chữ chuyển đến đó
+		$('#Name').keypress(function () {
+			$('#Metatitle').val(getMetaTitle($(this).val()));
+		});
+
+		//Hàm chuyển chữ có dấu thành không dấu
+		function getMetaTitle(str) {
+			str = str.toLowerCase();
+			str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, 'a');
+			str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, 'e');
+			str = str.replace(/ì|í|ị|ỉ|ĩ/g, 'i');
+			str = str.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, 'o');
+			str = str.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, 'u');
+			str = str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g, 'y');
+			str = str.replace(/đ/g, 'd');
+			str = str.replace(/\W+/g, ' ');
+			str = str.replace(/\s/g, '-');
+			return str;
+		}
+	</script>
+
+}

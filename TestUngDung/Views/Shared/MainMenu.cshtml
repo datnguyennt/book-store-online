@@ -1,0 +1,21 @@
+﻿@model List<ModelEF.Model.Menu>
+
+<nav id="navigation">
+	<!-- container -->
+	<div class="container">
+		<!-- responsive-nav -->
+		<div id="responsive-nav">
+			<!-- NAV -->
+			<ul class="main-nav nav navbar-nav">
+				@foreach (var item in Model)
+				{
+	<li><a href="@item.Link" target="@item.Target">@item.Name</a></li>
+	}
+			</ul>
+			<!-- /NAV -->
+		</div>
+		<div class="clear"></div>
+		<!-- /responsive-nav -->
+	</div>
+	<!-- /container -->
+</nav>

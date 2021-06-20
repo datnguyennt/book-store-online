@@ -1,0 +1,11 @@
+E:\Project\CSharp\LITHUYET\CuoiKy\NguyenThanhDat\Common\bin\Debug\Common.dll
+E:\Project\CSharp\LITHUYET\CuoiKy\NguyenThanhDat\Common\bin\Debug\Common.pdb
+E:\Project\CSharp\LITHUYET\CuoiKy\NguyenThanhDat\Common\obj\Debug\Common.csproj.AssemblyReference.cache
+E:\Project\CSharp\LITHUYET\CuoiKy\NguyenThanhDat\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+E:\Project\CSharp\LITHUYET\CuoiKy\NguyenThanhDat\Common\obj\Debug\Common.dll
+E:\Project\CSharp\LITHUYET\CuoiKy\NguyenThanhDat\Common\obj\Debug\Common.pdb
+E:\Project\CSharp\LITHUYET\CuoiKy\Common\bin\Debug\Common.dll
+E:\Project\CSharp\LITHUYET\CuoiKy\Common\bin\Debug\Common.pdb
+E:\Project\CSharp\LITHUYET\CuoiKy\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+E:\Project\CSharp\LITHUYET\CuoiKy\Common\obj\Debug\Common.dll
+E:\Project\CSharp\LITHUYET\CuoiKy\Common\obj\Debug\Common.pdb

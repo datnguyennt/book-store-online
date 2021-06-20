@@ -1,0 +1,49 @@
+﻿@{
+	Layout = null;
+}
+<div class="left-sidebar bg-gray-500 box-shadow">
+	<div class="sidebar-content">
+		<div class="sidebar-nav">
+			<ul class="side-nav">
+				<li class="nav-header">
+					<span class="">Main Category</span>
+				</li>
+				<li class=""><a href="@Url.Action("Index","home")"><i class="fa fa-dashboard"></i> <span>Trang chủ</span></a></li>
+				<br />
+				<li class="nav-header">
+					<span class="">Sản phẩm</span>
+				</li>
+				<li class="has-children">
+					<a href="#"><i class="fa fa-book"></i> <span>Thể loại sách</span> <i class="fa fa-angle-right arrow"></i></a>
+					<ul class="child-nav">
+						<li><a href="@Url.Action("Index","category")"><i class="fa fa-bars"></i> <span>Xem loại sách</span></a></li>
+						<li><a href="@Url.Action("create","category")"><i class="fa fa-plus"></i> <span>Thêm loại sách</span></a></li>
+					</ul>
+				</li>
+				<hr class="sidebar-divider" style="margin: 10px 15px 10px 15px;width:150px; border-color:#f8f9fc;">
+				<li class="has-children">
+					<a href="#"><i class="fa fa-cart-plus"></i> <span>Sản phẩm</span> <i class="fa fa-angle-right arrow"></i></a>
+					<ul class="child-nav">
+						<li><a href="@Url.Action("Index","product")"><i class="fa fa-bars"></i> <span>Xem sản phẩm</span></a></li>
+						<li><a href="@Url.Action("create","product")"><i class="fa fa-plus"></i><span>Thêm sản phẩm</span></a></li>
+					</ul>
+				</li>
+				<hr class="sidebar-divider" style="margin: 10px 15px 10px 15px;width:150px; border-color:#f8f9fc;">
+				<li class="nav-header">
+					<span class="">Tài khoản</span>
+				</li>
+				<li class="has-children">
+					<a href="#"><i class="fa fa-shopping-cart"></i> <span>Tài khoản</span> <i class="fa fa-angle-right arrow"></i></a>
+					<ul class="child-nav">
+						<li><a href="@Url.Action("Index","employee")"><i class="fa fa-user"></i> <span>Tài khoản quản trị</span></a></li>
+						<li><a href="@Url.Action("Index","customer")"><i class="fa fa-user animate"></i><span>Tài khoản khách hàng</span></a></li>
+					</ul>
+				</li>
+				<hr class="sidebar-divider" style="margin: 10px 15px 10px 15px;width:150px; border-color:#f8f9fc;">
+				<li class=""><a href="@Url.Action("Logout","login")"><i class="fa fa-close"></i> <span>Thoát</span></a></li>
+			</ul>
+		</div>
+		<!-- /.sidebar-nav -->
+	</div>
+	<!-- /.sidebar-content -->
+</div>

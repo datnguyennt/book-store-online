@@ -1,0 +1,27 @@
+﻿@model ModelEF.Model.Category
+
+@{
+	ViewBag.Title = "Chi tiết hãng";
+	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<br />
+<div class="col-md-6">
+	<div class="panel">
+		<div class="panel-body">
+			<div class="form-group">
+				@Html.LabelFor(model => model.Name)
+				<input type="text" id="disabled-input" name="disabled-input" placeholder="@Html.DisplayFor(model => model.Name)" disabled="" class="form-control">
+			</div>
+			<div class="form-group">
+				@Html.LabelFor(model => model.Metatitle)
+				<input type="text" id="disabled-input" name="disabled-input" placeholder="@Html.DisplayFor(model => model.Metatitle)" disabled="" class="form-control">
+			</div>
+			<div class="form-group">
+				@Html.LabelFor(model => model.Description)
+				<input type="text" id="disabled-input" name="disabled-input" placeholder="@Html.DisplayFor(model => model.Description)" disabled="" class="form-control">
+			</div>
+		</div>
+	</div>
+	<a href="@Url.Action("edit", new { id = Model.ID })" type="button" class="btn btn-primary">Sửa</a>
+	<a href="@Url.Action("Index", "category")" type="button" class="btn btn-warning">Quay lại</a>
+</div>
